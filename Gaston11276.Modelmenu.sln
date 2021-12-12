@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19856F76-F049-4D07-9807-E8A6282D6C01}"
+	ProjectSection(SolutionItems) = preProject
+		nfive.yml = nfive.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelmenu.Client", "Modelmenu.Client\Modelmenu.Client.csproj", "{401D0A4D-DF04-4D4B-8FBC-8DA7CD5B88BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{401D0A4D-DF04-4D4B-8FBC-8DA7CD5B88BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401D0A4D-DF04-4D4B-8FBC-8DA7CD5B88BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401D0A4D-DF04-4D4B-8FBC-8DA7CD5B88BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401D0A4D-DF04-4D4B-8FBC-8DA7CD5B88BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A75499A4-B96D-4C66-A16A-E517E2ED3626}
+	EndGlobalSection
+EndGlobal

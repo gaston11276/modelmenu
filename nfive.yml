@@ -1,0 +1,14 @@
+name: gaston11276/modelmenu
+version: 0.1.0
+description: NFive Plugin
+author: gaston11276
+license: LGPL-3.0-or-later
+client:
+  main:
+    - Gaston11276.Modelmenu.Client
+dependencies:
+  gaston11276/fivemui: ^0.1.0
+repositories:
+  - name: gaston11276/fivemui
+    type: local
+    path: C:\Users\johan\source\repos\NFive\gaston11276\Fivemui
