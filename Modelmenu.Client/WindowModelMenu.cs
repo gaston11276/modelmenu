@@ -87,6 +87,9 @@ namespace Gaston11276.Modelmenu.Client
 
 			Textbox header = new Textbox();
 			header.SetText("Model");
+			header.SetFont(Font.Pricedown);
+			header.SetFontSize(0.4f);
+			header.SetTextFlags(UiElementTextbox.TEXT_OUTLINE);
 			header.SetFlags(TRANSPARENT);
 			header.SetPadding(new UiRectangle(defaultPadding));
 			AddElement(header);
@@ -117,6 +120,7 @@ namespace Gaston11276.Modelmenu.Client
 
 			Textbox uiButtonClose= new Textbox();
 			uiButtonClose.SetText("Close");
+			uiButtonClose.SetFont(Font.CharletComprimeColonge);
 			uiButtonClose.SetPadding(new UiRectangle(defaultPadding));
 			uiButtonClose.SetProperties(CANFOCUS);
 			uiButtonClose.RegisterOnLMBRelease(Close);
@@ -126,6 +130,7 @@ namespace Gaston11276.Modelmenu.Client
 
 			Textbox uiButtonRevert = new Textbox();
 			uiButtonRevert.SetText("Revert");
+			uiButtonRevert.SetFont(Font.CharletComprimeColonge);
 			uiButtonRevert.SetPadding(new UiRectangle(defaultPadding));
 			uiButtonRevert.SetProperties(CANFOCUS);
 			uiButtonRevert.RegisterOnLMBRelease(Revert);

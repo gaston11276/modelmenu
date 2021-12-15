@@ -32,6 +32,8 @@ namespace Gaston11276.Modelmenu.Client
 
 		float defaultPadding = 0.0025f;
 
+		List<fpPedHash> onModelChangeCallbacks = new List<fpPedHash>();
+
 		public PanelModel()
 		{
 			CreateModelData(modelData);
@@ -52,7 +54,7 @@ namespace Gaston11276.Modelmenu.Client
 
 		public void SetCurrent(int index)
 		{
-			currentModelIndex = index;// GetModelIndex();
+			currentModelIndex = index;
 			originalModelIndex = currentModelIndex;
 		}
 
@@ -108,15 +110,18 @@ namespace Gaston11276.Modelmenu.Client
 
 			entry.uiLabel.SetPadding(new UiRectangle(defaultPadding));
 			entry.uiLabel.SetText(label);
+			entry.uiLabel.SetFont(Font.CharletComprimeColonge);
 			entry.uiLabel.SetFlags(UiElement.TRANSPARENT);
 			uiColumnLabels.AddElement(entry.uiLabel);
 
 			entry.uiName.SetPadding(new UiRectangle(defaultPadding));
 			entry.uiName.SetText(label);
+			entry.uiName.SetFont(Font.CharletComprimeColonge);
 			entry.uiName.SetFlags(UiElement.TRANSPARENT);
 			uiColumnNames.AddElement(entry.uiName);
 
 			entry.uiIndex.SetText(label);
+			entry.uiIndex.SetFont(Font.CharletComprimeColonge);
 			entry.uiIndex.SetPadding(new UiRectangle(defaultPadding));
 			entry.uiIndex.SetProperties(UiElement.CANFOCUS);
 			entry.uiIndex.SetFlags(UiElement.TRANSPARENT);
@@ -187,6 +192,11 @@ namespace Gaston11276.Modelmenu.Client
 			{
 				await ApplyToPed();
 			}
+
+			foreach (fpPedHash OnModelChange in onModelChangeCallbacks)
+			{
+				OnModelChange(modelData[currentModelIndex].pedHash);
+			}
 		}
 
 		public async Task ApplyToPed()
@@ -218,6 +228,11 @@ namespace Gaston11276.Modelmenu.Client
 			{
 				Game.PlayerPed.SetIntoVehicle(current_vehicle, VehicleSeat.Driver);
 			}
+		}
+
+		public void RegisterOnModelChangeCallback(fpPedHash OnModelChange)
+		{
+			onModelChangeCallbacks.Add(OnModelChange);
 		}
 	}
 }
